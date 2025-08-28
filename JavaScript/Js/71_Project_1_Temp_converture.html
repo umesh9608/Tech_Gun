@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <style>
+    /* Basic styling for page */
+    body {
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      font-family: Arial, sans-serif;
+      padding: 50px 100px;
+      margin: 0;
+    }
+
+    /* Heading style */
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      color: #fff;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Main container */
+    #container {
+      text-align: center;
+      background-color: #1abc9c;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Input container */
+    .input-div {
+      display: inline-block;
+      margin: 20px;
+    }
+
+    /* Input fields */
+    .inp {
+      padding: 10px;
+      margin-top: 8px;
+      font-size: 25px;
+      font-weight: bold;
+      width: 250px;
+      text-align: center;
+      border: 3px solid #16a085;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    /* Hover effect on input */
+    .inp:focus {
+      border-color: #fff;
+      box-shadow: 0 0 10px #fff;
+      outline: none;
+    }
+
+    /* Labels */
+    label {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌡️ Temperature Converter</h1>
+  <div id="container">
+    <div class="input-div">
+      <label for="cel">Celsius</label><br>
+      <input type="number" value="0" id="cel" class="inp">
+    </div>
+    <div class="input-div">
+      <label for="fah">Fahrenheit</label><br>
+      <input type="number" value="32" id="fah" class="inp">
+    </div>
+  </div>
+
+  <script>
+    // Get input elements
+    var cel = document.getElementById("cel");
+    var fah = document.getElementById("fah");
+
+    // Event listener for Celsius input
+    cel.addEventListener('input', function () {
+      // Get Celsius value
+      let c = parseFloat(this.value);
+
+      // Convert Celsius to Fahrenheit
+      let f = (c * 9 / 5) + 32;
+
+      // Round to 4 decimal places if needed
+      if (!Number.isInteger(f)) {
+        f = f.toFixed(4);
+      }
+
+      // Set Fahrenheit value
+      fah.value = f;
+    });
+
+    // Event listener for Fahrenheit input
+    fah.addEventListener('input', function () {
+      // Get Fahrenheit value
+      let f = parseFloat(this.value);
+
+      // Convert Fahrenheit to Celsius
+      let c = (f - 32) * 5 / 9;
+
+      // Round to 4 decimal places if needed
+      if (!Number.isInteger(c)) {
+        c = c.toFixed(4);
+      }
+
+      // Set Celsius value
+      cel.value = c;
+    });
+  </script>
+</body>
+</html>

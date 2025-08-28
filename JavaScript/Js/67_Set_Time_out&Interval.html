@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time out and time interval</title>
+</head>
+
+<body>
+  <!-- time out me hm wait krte h ki bhi chij execute kren ka jaise hm chahte ji ke pabage open hone ke kuch time baad kuch show ho -->
+
+  <button id="btn">Clear TimeInterval</button>
+
+  <script>
+    //---------setTimeOut-----------
+    // setTimeout(myFunction, 5000); //first para is which fun i want to execute and second how much time take 
+
+    // function myFunction(){
+    //   alert("Please learn js..");
+    // }
+
+    //
+    //setTimeOut ek id return krta h to ese hm ek hm ese koi variable me store bhi kra skte h ye timeOut esliye kaam ata h ki maan lo ki time out pe kuch kre (kise situation/condition pe hm chahte ki ye execute no ho)
+    // let timeOutId = setTimeout(myFunction, 5000); // 
+
+    // function myFunction() {
+    //   alert("Please learn js..");
+    // }
+
+    //   clearTimeout(timeOutId) //ye myFunction ko run krne se phle hi clear kr de rha h esliye output kuch nhi show hoga
+
+
+    //----------setInterval--------------
+    // ab hm chahte ki ki koi kaam hrek 3 sec pr repeat ho to setInterval ka use krenge
+
+    var t1 = setInterval(fun, 2000);
+
+    function fun() {
+      console.log("Learn Js.....");
+    }
+
+    let btn1 = document.getElementById("btn");
+    btn1.addEventListener('click', function () {
+      clearInterval(t1);
+    })
+  </script>
+</body>
+
+</html>
+<!-- 2.17 -->

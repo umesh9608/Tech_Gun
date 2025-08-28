@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create and append element</title>
+</head>
+
+<body>
+  <!-- to ab hm sikhte h ki kis tarike se new html bnate h or add krte h (append ka mtlab jo bhi phle se h uske baad kuch add kr do) -->
+
+  <div id="intro">
+    <p>this is a p tag</p>
+  </div>
+
+  <!-- for read -->
+  <div id="intro">
+    <p id="p1">this is a p tag</p>
+  </div>
+
+
+
+
+  <!-- imp.......... -->
+  <!-- es list me 4 li h hme ek add krna h -->
+  <ul id="list">
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3</li>
+    <li>list 4</li>
+  </ul>
+
+
+
+  <script>
+    /*
+    let elm = document.getElementById("intro");
+
+    let h1 = document.createElement('h1');
+
+    // ab intro ke ander h1 ko add kret h (append krte h)
+    elm.appendChild(h1); //appendChild()is a fun
+    // ab h me kuch add kr rhe h
+    let text = document.createTextNode("this is h1 tag") ;//.createTextNode is fun
+    h1.appendChild(text);
+    */
+
+    /*
+    // abhi hm jo h1 bnaya h useme class ya id lgna h to
+    let elem = document.getElementById("intro");
+    let h1 = document.createElement('h1');
+
+    h1.className = "try pi"; //if add multipe class name  // class lagane ke liye
+
+    h1.id = "intro1";
+    let text= document.createTextNode("this is h1 tag");
+    h1.appendChild(text);  //this is method
+    // elem.appendChild(h1);
+    
+   //hb hme tag ke ander nhi body me hi add krna ho to elem.appendChild() ko hta kr 
+   document.body.appendChild(h1);
+   */
+
+
+    //  abhi kr hm .createTextNode method ke throw text ko add krte the bt ab hm propeties ke trhow krenge
+
+    /*
+    let elem = document.getElementById("intro");
+    let h1 = document.createElement('h1');
+  
+    h1.className = "try";
+    h1.textContent="this content is added"; //this is properties
+    document.body.appendChild(h1);
+    // ab hm p tag element ko change to kr liye hm read bhi kr skte h
+    let pra = document.getElementById("p1");
+    console.log(pra.textContent);
+    */
+
+
+    // ul>li>
+    let list1 = document.getElementById("list");
+    
+
+    let item = document.createElement("li"); //esese le li tag bn gya h ab hme content add krna h
+    item.textContent = "new list 5";
+     //new li 5 bn gya bt add nhi hua h esliye append child krte h
+     list1.appendChild(item);
+
+  </script>
+
+</body>
+
+</html>

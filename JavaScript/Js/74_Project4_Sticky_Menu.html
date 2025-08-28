@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Menu</title>
+  <link rel="icon" type="image/png" href="https://www.logodesign.net/images/nature-logo.png">
+  <!-- Favicon / Logo in Title -->
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    #header {
+      text-align: center;
+    }
+
+    #logo {
+      width: 250px;
+      height: auto;
+    }
+
+    #menu-bar {
+      text-align: center;
+      background-color: cadetblue;
+    }
+
+    #menu-bar li {
+      display: inline-block;
+      padding: 15px 10px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #container {
+      text-align: center;
+      padding: 50px 100px;
+    }
+
+    #about_img {
+      width: 100%;
+    }
+
+    /* Sticky class to fix the menu bar */
+    .sticky {
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <img src="https://www.logodesign.net/images/nature-logo.png" alt="logo">
+  </div>
+
+  <nav id="menu-bar">
+    <li>Home</li>
+    <li>About Us</li>
+    <li>Our Team</li>
+    <li>Client</li>
+    <li>Contact Us</li>
+  </nav>
+
+  <div id="container">
+    <h1>About Us</h1>
+    <img id="about_img" src="../img/ybn_frnds.JPG" alt="about img">
+    <p>
+      Welcome to our company! We are a passionate team dedicated to delivering high-quality services 
+      and creating impactful solutions for our clients. Our goal is to blend creativity, technology, 
+      and innovation to develop products that make a real difference.  
+
+      We specialize in offering top-notch services in various fields, including web development, 
+      digital marketing, and customer engagement strategies. With a strong focus on user satisfaction, 
+      we ensure that every project we handle meets the highest standards.  
+
+      Our team consists of experienced professionals who believe in teamwork, continuous learning, 
+      and staying updated with the latest industry trends. Over the years, we have built a reputation 
+      for excellence and reliability. Whether you're an individual, startup, or large enterprise, 
+      we aim to provide solutions tailored to your unique needs.
+    </p>
+  </div>
+
+  <script>
+    // Add a scroll event listener to the window
+    window.addEventListener('scroll', function() {
+
+      // Get the navigation menu bar element
+      let navbar = document.getElementById("menu-bar");
+
+      // Check if the page is scrolled down at least 190px
+      if (window.pageYOffset >= 190) {
+        // Add the "sticky" class to make the menu bar fixed at the top
+        navbar.classList.add("sticky");
+      } else {
+        // Remove the "sticky" class when scrolling back up
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+</body>
+</html>

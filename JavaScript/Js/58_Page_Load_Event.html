@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Load event</title>
+</head>
+<body>
+
+  <!-- page load jb hota h to basicall two chije trigger hota h first 
+   DOMContentLoaded: the browser fully loaded HTML and complement building the DOM tree. However,  it hasn't loaded external resources like stylesheet and images. In this event, you can start selecting DOM nodes or initialize interface.
+   
+   and second
+   Load: the browser fully loaded the HTML and also external resources like images and stylesheets. When you  leave the page. following events fire in sequence;-->
+
+   <img  id="img1" src="../img/sandeep.JPG" alt="sandep img" width="1000" height="1000">
+
+   <script>
+    window.addEventListener('DOMContentLoaded', function(){
+      console.log("Dom Tree Created");
+    })
+
+    let img = document.getElementById("img1");
+
+    img.addEventListener('load', function(){
+      console.log("Full loaded") ;//jb img download ho jye to ye trigger kre
+    })
+   </script>
+  
+</body>
+</html>

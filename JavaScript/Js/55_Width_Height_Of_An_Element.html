@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Width and Height of an Element</title>
+
+  <style>
+    /* Styling for the box */
+    .dim {
+      border: 2px solid red;
+      padding: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- div with class "dim" for styling -->
+  <div id="box" class="dim">
+    <p>This is dummy text for learning JS</p>
+  </div>
+
+  <script>
+    // Select the element
+    let box = document.getElementById("box");
+
+    /*
+      offsetWidth:
+      ------------
+      - Returns element width including: content + padding + border.
+      - Does NOT include margin.
+
+      offsetHeight:
+      -------------
+      - Returns element height including: content + padding + border.
+      - Does NOT include margin.
+    */
+    let width = box.offsetWidth;  
+    let height = box.offsetHeight;
+
+    // clientWidth & clientHeight:
+    // ---------------------------
+    // - Returns element size including: content + padding.
+    // - Excludes border and margin.
+    // - Useful when you want inner size without border.
+    // console.log(box.clientWidth);
+    // console.log(box.clientHeight);
+
+    console.log("offsetWidth:", width);
+    console.log("offsetHeight:", height);
+  </script>
+
+</body>
+</html>

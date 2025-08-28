@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling And Event Capturing</title>
+  <style>
+    body{
+      padding: 100px;
+      background-color: rgb(182, 143, 143);
+    }
+
+    #myDiv{
+      padding: 50px;
+      background-color: rgb(37, 37, 211);
+    }
+  </style>
+</head>
+<body>
+  <!-- body->div-> button h to mai mutton click krte h to sabse phle kon sa even kaam krta h body,div ya button
+
+  1. Even Bubbling: in the event bubbling model, an event starts at the most specific element and then flows upward toward the least specific element (the document or even window)
+
+  when you click the button , the click event occurs in the following order .button-> div with the id container > body > html > document
+<mtlab> jo sabse ander h wo sabse phle active hoga
+
+
+  2. Event Capturing : in the event capturing model , an event starts at the least spedific element and flows downward toward the most specific element.
+   when you click the button, the clikc event occurs in the following order  .document >html>body>div with the id container>button
+-->
+
+<!-- how to use this 
+ 
+addEventListener(event, function, useCapture) 
+. The default value is false , which will use the bubbling propagation, when the value is set to true, the event uses the capturing propagation.-->
+
+<div id="myDiv">
+  <button id="btn">Click me</button>
+
+
+  <!-- <script>
+    let d = document.getElementById("myDiv");
+    let b = document.getElementById("btn");
+
+    //
+    b.addEventListener('click', btnClicked); //aha 3rd parameter pass nhi kiya to defalut h mtlab false h (means bubbling ka matlab children first then div then body then......)
+    d.addEventListener('click', divClicked);
+
+    document.body.addEventListener('click', bodyClicked);
+
+
+    function btnClicked(){
+      console.log("button clicked");
+    }
+
+    function divClicked(){
+      console.log("Div clicked..");
+    }
+
+    function bodyClicked(){
+      console.log("Body Clicked...");
+    }
+
+  </script> -->
+
+
+  <!-- pass 3 parameter -->
+    <!-- <script>
+    let d = document.getElementById("myDiv");
+    let b = document.getElementById("btn");
+
+    //
+    b.addEventListener('click', btnClicked, true);
+    d.addEventListener('click', divClicked,true);
+    document.body.addEventListener('click', bodyClicked,true);
+
+
+    function btnClicked(){
+      console.log("button clicked");
+    }
+
+    function divClicked(){
+      console.log("Div clicked..");
+    }
+
+    function bodyClicked(){
+      console.log("Body Clicked...");
+    }
+
+  </script> -->
+
+  <!-- ab hn chahte h ki jb button pe click kret to shirf button active ho  div or body nhi-->
+       <script>
+    let d = document.getElementById("myDiv");
+    let b = document.getElementById("btn");
+
+    //
+    b.addEventListener('click', btnClicked);
+    d.addEventListener('click', divClicked);
+    document.body.addEventListener('click', bodyClicked);
+
+
+    function btnClicked(event){
+      console.log("button clicked");
+      event.stopPropagation();
+    }
+
+    function divClicked(){
+      console.log("Div clicked..");
+    }
+
+    function bodyClicked(){
+      console.log("Body Clicked...");
+    }
+
+  </script>
+</div>
+</body>
+</html>
+

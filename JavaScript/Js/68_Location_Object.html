@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Object</title>
+</head>
+<body>
+  <!-- location ob bhi ke trha ka windows ka sub obj h ye use kiya jata h current page ka address mtlab jo url hota h uske bare me information nikal ne me ya phir browser ko re-direct(ek page se dusre me ) karane me-->
+  
+
+  <button id="btn" onclick="fun()">re-Direct to Google</button>
+
+  <script>
+    // note hm aha windows. likh bhi skte or nhi bhi qki ye default windows se hi suru hota like
+    //  1---------loccation obj properties---------
+// console.log(window.location.href);
+// console.log(location.href);
+// console.log(location.pathname);
+// console.log(location.protocol);
+
+//2--------------location obj method-------------
+// 3 karike se hm re-direct kra skte h 1. windows.location
+function fun(){
+  //method 1 for redirect
+  // window.location = "https://www.google.com";
+
+  //2
+  // location.href = "https://www.google.com";
+  
+  //3
+  //  location.assign("https://www.google.com");
+  
+  // replace method bhi assign method jesa hi kaam krta h bt ye browser ke history hota h na usme jha hm redirect kiye h use entry nhi krta h
+  //assign method browser me histry entry dalta h bt  replace method browser ke histry me entry nhi dalta h 
+
+  // location.replace("https://www.google.com"); //ese hm back nhi ja skte h
+
+  // --reload--
+  location.reload("https://www.google.com");
+
+}
+
+
+  </script>
+</body>
+</html>

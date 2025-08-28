@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove event listner</title>
+</head>
+<body>
+   <!-- now we leran same eventListner use multime time (like two click use in same event)-->
+
+   <!-- type 1 to use click event -->
+    <button id="btn">Click me</button>
+  
+
+
+    <!--  -->
+    <script>
+      // //type 1
+       let btn = document.getElementById("btn");
+
+      function click1(){
+        console.log("Click1 activated");
+      }
+
+      function click2(){
+        console.log("click2 is activated");
+      }
+
+      // ab hme register krna h ki click hone pe dono cactivate ho 
+
+      btn.addEventListener('click', click1);
+      btn.addEventListener('click', click2);  
+
+
+      // remove event
+      //remove function tb kaam krta hb ap addeventListner ke throw hi kaam kiya h or duara point aap anonomus functino ka use nhi ke external function ka use krte ho 
+
+      //hm chahte h ke ek particular conditon pe ek vent hata diya jye (ye conditin base hota h)
+      btn.removeEventListener('click',click2);
+
+    </script>
+</body>
+</html>

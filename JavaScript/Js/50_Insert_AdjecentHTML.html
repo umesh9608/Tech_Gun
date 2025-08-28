@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert Adjecent HTML</title>
+</head>
+<body>
+  <!-- ye insert AdjecentHTML  -->
+
+  <!-- beforebegin -->
+  <div id="intro"> <!-- selected-->
+    <!-- afterbegin -->
+    <h2>heading</h2>
+    <p>this is a p tag</p>
+    <!-- beforeend -->
+  </div>
+
+  <!-- most powerful -->
+   <script>
+    let elm = document.getElementById("intro");
+    
+    let html = "<h1>new h1</h1>"
+    elm.insertAdjacentHTML('beforebegin',html) //first postition and second what we write
+   </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getComputedStyle Example</title>
+
+  <style>
+    /* CSS style applied to the button */
+    #btn {
+      background-color: brown; /* background color */
+      color: white;            /* text color */
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Button element -->
+  <button id="btn" name="form1">send</button>
+
+  <script>
+    // Select the button by its ID
+    let btn = document.getElementById("btn");
+
+    /*
+      getComputedStyle(element):
+      --------------------------
+      - Returns an object containing the final computed styles
+        of the given element.
+      - Computed style means styles after applying:
+        * External CSS
+        * Internal CSS
+        * Inline styles
+        * Browser default styles
+      - Useful to check actual CSS property values applied.
+    */
+    let css = getComputedStyle(btn); // Get final computed styles of the button
+
+    // Output the text color of the button to the console
+    // Note: element.style.color would return "" if not set inline
+    console.log(css.color); // Example output: "rgb(255, 255, 255)"
+  </script>
+</body>
+</html>

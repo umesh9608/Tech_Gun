@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- part 1 -->
+  <!-- <button id="btn">Send</button> -->
+  
+  <!-- part2 -->
+<button id="btn" name="form1">Send</button>
+
+  <script>
+// attribute meanse additinal informatin
+
+// learn how to add  attribute
+let btn = document.getElementById("btn");
+
+// btn.setAttribute("name","form1") //in setAttribute passes two parameter first name and second attribute
+// btn.setAttribute("class","form1")
+
+//----part 2 how to fiend existing attribute
+// let val = btn.getAttribute("name") //pass which attribute value you want to know(like name, id etc) and store the value in new varaible like (val)
+// console.log(val); //to check the attibute value
+
+// ---part 3 remove attribute
+// let val = btn.removeAttribute("name"); //check element
+
+// ---part 4 how to check attribure exist or not
+let val = btn.hasAttribute("name"); //it gives true and false value if if have
+console.log(val); //true
+
+  </script>
+</body>
+</html>

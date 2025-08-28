@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stopwatch</title>
+  <style>
+    body {
+      background-color: #2c3e50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #container {
+      color: #d7dfe4;
+    }
+
+    .digit {
+      font-size: 150px;
+      font-weight: bold;
+    }
+
+    .txt {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    #btn-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn {
+      padding: 7px 25px;
+      font-size: 15px;
+      margin: 0px 10px;
+      color: white;
+      border: 0px;
+      cursor: pointer;
+    }
+
+    #start {
+      background-color: #1abc9c;
+    }
+
+    #stop {
+      background-color: #3498db;
+    }
+
+    #reset {
+      background-color: #e74c3c;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="time">
+      <!-- Hours -->
+      <span class="digit" id="hr">00</span>
+      <span class="text">Hr</span>
+
+      <!-- Minutes -->
+      <span class="digit" id="min">00</span>
+      <span class="text">Min</span>
+
+      <!-- Seconds -->
+      <span class="digit" id="sec">00</span>
+      <span class="text">Sec</span>
+
+      <!-- Removed milliseconds display -->
+    </div>
+    <div id="btn-container">
+      <!-- Buttons to control stopwatch -->
+      <button class="btn" id="start" onclick="start()">Start</button>
+      <button class="btn" id="stop" onclick="stop()">Stop</button>
+      <button class="btn" id="reset" onclick="reset()">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    // Variables to store time values
+    var hr = 0;    // Hours
+    var min = 0;   // Minutes
+    var sec = 0;   // Seconds
+
+    // To check if stopwatch is running or stopped
+    var timer = false;
+
+    // Start the stopwatch
+    function start() {
+      timer = true;      // Set timer to true
+      stopwatch();       // Call the stopwatch function
+    }
+
+    // Stop the stopwatch
+    function stop() {
+      timer = false;     // Set timer to false (pause stopwatch)
+    }
+
+    // Reset the stopwatch
+    function reset() {
+      timer = false;     // Stop the stopwatch
+
+      // Reset all time values to 0
+      hr = 0;
+      min = 0;
+      sec = 0;
+
+      // Update UI back to 00:00:00
+      document.getElementById("hr").innerHTML = "00";
+      document.getElementById("min").innerHTML = "00";
+      document.getElementById("sec").innerHTML = "00";
+    }
+
+    // Main stopwatch function
+    function stopwatch() {
+      // Only run when timer is true (started)
+      if (timer == true) {
+
+        // Increase seconds by 1
+        sec = sec + 1;
+
+        // If seconds reach 60, increase minutes by 1
+        if (sec == 60) {
+          min = min + 1;
+          sec = 0;
+        }
+
+        // If minutes reach 60, increase hours by 1
+        if (min == 60) {
+          hr = hr + 1;
+          min = 0;
+          sec = 0;
+        }
+
+        // Store formatted values (with leading 0)
+        var hrString = hr;
+        var minString = min;
+        var secString = sec;
+
+        // Add leading zero if value < 10
+        if (hr < 10) {
+          hrString = "0" + hrString;
+        }
+        if (min < 10) {
+          minString = "0" + minString;
+        }
+        if (sec < 10) {
+          secString = "0" + secString;
+        }
+
+        // Update UI
+        document.getElementById("hr").innerHTML = hrString;
+        document.getElementById("min").innerHTML = minString;
+        document.getElementById("sec").innerHTML = secString;
+
+        // Call stopwatch function again after 1 second
+        setTimeout(stopwatch, 1000);
+      }
+    }
+  </script>
+</body>
+</html>

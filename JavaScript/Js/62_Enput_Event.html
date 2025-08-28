@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Event</title>
+</head>
+
+<body>
+
+  <form action="">
+
+    <input type="text" id="myInput">
+  </form>
+
+
+  <script>
+    //focus(input ke ander) & blur (input box ke bahar)
+    let x = document.getElementById("myInput");
+    x.addEventListener('focus', myFocusFunction); //first even name and second which fun active name
+    x.addEventListener('blur', myBlurFunction);
+
+
+    function myFocusFunction() {
+      x.style.background = "yellow";
+    }
+
+    function myBlurFunction() {
+      x.style.background = "white";
+    }
+
+
+    // 2 even  Change event ye detact kren ki input field me kuch changes aya h
+    x.addEventListener('change', function () {
+      console.log(this.value);
+    })
+
+    // 3 input event jb bhi kuch type krte h ya hatate to ye triggure  hota h 
+      x.addEventListener('input', function () {
+      console.log(this.value);
+    })
+
+
+  </script>
+</body>
+
+</html>

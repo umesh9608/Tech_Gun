@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select by id</title>
+</head>
+
+<body>
+  <!-- id html me ek hi elemnent ko milta h -->
+  <ul>
+    <li class="cl">List 1</li>
+    <li id="first">List 2</li>
+    <li class="cl">List 3</li>
+
+    <!-- list 2 me hm kuch change kr rhe h using js -->
+
+    <script>
+      /*//1 document is a obj and   getElementById is a method
+     let elm = document.getElementById("first") ; //element select ho gya ab ese koi variable me store kr rhe h esliye let elm =
+     console.log(elm); 
+     */
+
+      /*  //2 select hone ke baad hum manipulate (change)krna cha rhe 
+       let elm = document.getElementById("first") ; 
+       // console.log(elm.innerHTML); // List 2
+       elm.innerHTML = "<p> hello</p>" //ye line List 2 ko hta kr <p> hello </p> kr dega
+ */
+
+      //3 ab ek se jyda element hm select kise kr skte hai (use class)
+      let elm = document.getElementsByClassName("cl");  //it give collection of array like array
+      // console.log(elm); //to check collection 
+      // elm.innerHTML = "<p> hello</p>";
+    </script>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Switcher</title>
+  <style>
+    /* Basic page styling */
+    body {
+      margin: 0;
+      padding: 20px 100px;
+      transition: background-color 0.3s ease; /* Smooth background transition */
+      font-family: Arial, sans-serif;
+    }
+
+    /* Heading styling */
+    h1 {
+      text-align: center;
+      text-decoration: underline;
+      font-size: 35px;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+
+    /* Image styling */
+    img {
+      width: 100%;
+      height: 650px ;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Paragraph styling */
+    p {
+      font-size: 18px;
+      text-align: justify;
+      line-height: 1.6;
+      transition: color 0.3s ease;
+    }
+
+    /* Color buttons */
+    .btn {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      border: 2px solid gray;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-left: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    /* Button hover effect */
+    .btn:hover {
+      transform: scale(1.2);
+    }
+
+    /* Predefined colors */
+    #white {
+      background-color: white;
+    }
+
+    #aqua {
+      background-color: aquamarine;
+    }
+
+    #violet {
+      background-color: #ce9aff;
+    }
+
+    #black {
+      background-color: black;
+    }
+
+    /* Positioning the color switcher */
+    #color_switcher {
+      text-align: right;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Color Switcher Buttons -->
+  <div id="color_switcher">
+    <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+    <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+    <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+    <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+  </div>
+
+  <!-- Heading -->
+  <h1 class="text">About Us</h1>
+
+  <!-- Image -->
+  <img src="../img/ybn_frnds.JPG" alt="img">
+
+  <!-- Paragraph -->
+<p class="text">
+  Welcome to our platform! We are passionate about empowering students, beginners, and professionals by providing 
+  high-quality learning resources, practical tutorials, and real-world projects. Our goal is to make technology 
+  learning simple, interactive, and accessible to everyone. In today’s digital world, acquiring technical skills 
+  is no longer optional; it’s essential. That’s why we focus on teaching web development, backend programming, 
+  database management, and the latest industry trends in a clear and structured way.
+
+  We believe that learning should not feel complicated or overwhelming. Whether you are just starting your journey 
+  in HTML, CSS, and JavaScript or looking to master advanced technologies like React, Node.js, Express, and MySQL, 
+  our platform provides step-by-step guidance to help you achieve your goals. Through practical examples and 
+  hands-on projects, we ensure that you not only understand the concepts but also gain the confidence to implement 
+  them in real-world scenarios.
+
+  Our mission goes beyond teaching coding; we aim to build a strong foundation of problem-solving, logical thinking, 
+  and creativity. By working on real-life projects like weather apps, URL shorteners, library management systems, 
+  and database-driven websites, you’ll develop a deep understanding of how modern applications work. These projects 
+  are designed to prepare you for industry-level challenges and improve your employability.
+
+  We also provide resources on backend development and database management, ensuring that you have a complete 
+  understanding of how front-end and back-end systems work together. You will learn how to create APIs, handle 
+  authentication using JWT, manage user data securely, and connect your applications to powerful databases like 
+  MySQL and MongoDB. Our tutorials are designed with clarity and simplicity so even non-technical learners can 
+  follow along without feeling lost.
+
+  Apart from coding, we emphasize the importance of tools and technologies that make you a better developer. You 
+  will gain knowledge of Git and GitHub for version control, cloud computing for modern deployments, and UI/UX 
+  basics to make your websites more user-friendly and visually appealing. By mastering these skills, you will 
+  become a complete developer ready to face real-world challenges.
+
+  Our community-driven approach ensures that you are never alone on your learning journey. We encourage collaboration, 
+  discussion, and problem-solving through interactive examples and personalized mentoring. Whether you are a school 
+  student, college learner, or working professional, our resources are carefully designed to cater to all skill 
+  levels and learning paces.
+
+  Together, let’s build a future where technology empowers everyone. Start your journey today, explore the endless 
+  possibilities of coding, and unlock your potential with us. With consistent effort and the right guidance, your 
+  dream of becoming a skilled developer is just a few steps away!
+</p>
+
+
+
+  <script>
+    // Function to change background color dynamically
+    function changeBG(color) {
+      // Change background color of the body
+      document.body.style.backgroundColor = color;
+
+      // Get all elements with the class "text"
+      let txt = document.getElementsByClassName("text");
+
+      // If the background is black, make the text white for better visibility
+      if (color === "#000000") {
+        for (const elm of txt) {
+          elm.style.color = "white";
+        }
+      } else {
+        // Otherwise, keep the text color black
+        for (const elm of txt) {
+          elm.style.color = "black";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

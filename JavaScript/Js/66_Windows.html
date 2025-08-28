@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>windows</title>
+  <style>
+    body {
+      background-color: aquamarine;
+    }
+  </style>
+</head> -->
+
+<!-- <body> -->
+  <!-- hme apna windows ka size pta krna h
+   2 types (1)innerHeight,innerWidth [jha mera webpage dikhta h use khte h] (2)outerHeight,outerWidth [esme pura browser atha h like document console...] -->
+ 
+
+  <!-- <script>
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+    // ab hme actual browser ka h/w pta krna ho to 
+    console.log(window.outerHeight);
+    console.log(window.outerWidth);
+  </script> -->
+
+<!-- </body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="btn1">Google</button>
+  <button id="btn2">Yahoo</button>
+  <button id="btn3">Close</button>
+
+  <script>
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let btn3 = document.getElementById("btn3");
+
+    let url ="https://www.google.com";
+    let features = "height=500,width=500";
+    let win; // variable to store reference of opened window
+
+    // Button 1 → Open Google
+    btn1.addEventListener('click', function () {
+      win = window.open(url, 'googleWin', features);
+    
+    });
+
+    // Button 2 → Open Yahoo
+    btn2.addEventListener('click', function () {
+      win = window.open('https://www.yahoo.com', 'yahooWin', features);
+      
+    });
+
+    // Button 3 → Close the last opened window
+    btn3.addEventListener('click', function () {
+     win.close();
+    });
+  </script>
+</body>
+
+</html>

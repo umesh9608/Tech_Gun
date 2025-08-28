@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+</head>
+<body>
+  <!-- part 1 hm cha rhe h  ki id mera child me h or parent ul ko access kr ke kuch change krna like <ul>hello</ul>  -->
+<!-- <ul>
+  <li id="intro">list 1</li>
+  <li>list 2</li>
+  <li>list 3</li>
+  <li>list 4</li>
+</ul>
+<ul>
+  <li>list a</li>
+  <li>list b</li>
+  <li>list c</li>
+  <li>list d</li>
+</ul> -->
+
+<!-- part 2 hm hm cha rhe h ki parent ke throw child ko access kr ke kuch change krna -->
+  <!-- <ul id="intro">
+  <li >list 1</li>
+  <li>list 2</li>
+  <li>list 3</li>
+  <li>list 4</li>
+</ul>
+<ul>
+  <li>list a</li>
+  <li>list b</li>
+  <li>list c</li>
+  <li>list d</li>
+</ul> -->
+
+<!-- learn sibling -->
+ <ul>
+  <li>list a</li>
+  <li id="intro">list 2</li>
+  <li>list 3</li>
+  <li>list 4</li>
+</ul>
+
+<script>
+  /*part 1
+  let elm = document.getElementById("intro");
+  // console.log(elm); //<li id= "intro">...</li>
+let prt = elm.parentElement;
+console.log(prt); // <ul>.....</ul> 
+//ab hm change kr skte h jb element select ho gya ho to 
+prt.innerHTML = "hello" //esme li ka parrent ul tha esliye ul me hello print kr diya
+*/
+
+// part 2
+//ab hm perent id ke throw child ko access kr na cha rhe h
+// let elm = document.getElementById("intro");
+// let node = elm.firstElementChild; //we select lastElementChild();
+// console.log(node);//<li>list 1</li>
+
+// ab hme sara ka sara li select krna ho to use let node = elm.children;
+
+//ab hme sibling(same lavel pe) select krna ho to (list 1 ,list 2 and list 3 is same labe p hai)
+let elm = document.getElementById("intro");
+
+let node = elm.previousElementSibling; //target se phle ka element selcet krna ho to 
+// let node = elm.nextElementSibling; //target ke baad ka select krna ho to
+console.log(node);
+</script>
+</body>
+</html>
+

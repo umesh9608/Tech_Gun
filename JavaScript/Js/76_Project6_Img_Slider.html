@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    .slide-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+    }
+
+    /* Arrow button styles */
+    .arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 45%;
+      color: black;
+      background-color: white;
+      padding: 8px 19px;
+      border-radius: 50%;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    /* Caption styles */
+    .caption {
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Hide all slides by default */
+    .slide {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slide-container">
+    <!-- Slide 1 -->
+    <div class="slide">
+      <img src="../img/im2.jpg" alt="img2">
+      <div class="caption">Caption Text 0</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="../img/im2.jpg" alt="img2">
+      <div class="caption">Caption Text 1</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="../img/im3.jpg" alt="img3">
+      <div class="caption">Caption Text 2</div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+      <img src="../img/im4.jpg" alt="img4">
+      <div class="caption">Caption Text 3</div>
+    </div>
+
+    <!-- Previous & Next Arrows -->
+    <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+    <span class="arrow next" onclick="controller(1)">&#10095;</span>
+  </div>
+
+  <script>
+    // Set initial slide index
+    let flag = 2;
+
+    // This function controls next & previous buttons
+    function controller(x) {
+      flag = flag + x; // Increase or decrease slide index
+      slideShow(flag); // Call slide show with updated index
+    }
+
+    // Call function to display initial slide
+    slideShow(flag);
+
+    // Function to display slides
+    function slideShow(num) {
+      let slides = document.getElementsByClassName('slide');
+
+      // If index exceeds last slide → reset to first slide
+      if (num == slides.length) {
+        flag = 0;
+        num = 0;
+      }
+
+      // If index goes negative → jump to last slide
+      if (num < 0) {
+        flag = slides.length - 1;
+        num = slides.length - 1;
+      }
+
+      // Hide all slides
+      for (let y of slides) {
+        y.style.display = "none";
+      }
+
+      // Show the selected slide
+      slides[num].style.display = "block";
+    }
+  </script>
+</body>
+
+</html>

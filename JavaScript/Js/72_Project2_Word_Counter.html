@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Counter</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f4f8fb;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      background-color: #0067B0;
+      color: white;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Styling for textarea */
+    #textbox {
+      width: 90%;
+      max-width: 800px;
+      height: 200px;
+      border: 2px solid #0067B0;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      resize: none;
+    }
+
+    /* Hover effect for textarea */
+    #textbox:focus {
+      border-color: #0095ff;
+      box-shadow: 0 4px 12px rgba(0, 149, 255, 0.3);
+    }
+
+    /* Result section */
+    p {
+      margin-top: 20px;
+      text-align: center;
+      background-color: #0067B0;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Highlighting numbers */
+    span {
+      color: #ffeb3b;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>✨ Word & Character Counter ✨</h1>
+  <textarea id="textbox" cols="30" rows="10" placeholder="Start typing your text here..."></textarea>
+  <p>
+    <span id="word">0</span> Words &nbsp; | &nbsp;
+    <span id="char">0</span> Characters
+  </p>
+
+  <script>
+    // Get the textarea element
+    let textbox = document.getElementById("textbox");
+
+    // Add input event listener to count words & characters in real-time
+    textbox.addEventListener('input', function () {
+
+      // Get the current text value inside textarea
+      let text = this.value;
+
+      // Count total characters including spaces
+      let char = text.length;
+
+      // Display character count
+      document.getElementById("char").innerHTML = char;
+
+      // Remove unnecessary spaces from start & end
+      text = text.trim();
+
+      // Split text into words based on spaces
+      let words = text.split(" ");
+
+      // Filter out empty strings caused by multiple spaces
+      let cleanList = words.filter(function (elm) {
+        return elm != "";
+      });
+
+      // Display total word count
+      document.getElementById("word").innerHTML = cleanList.length;
+    });
+  </script>
+</body>
+</html>

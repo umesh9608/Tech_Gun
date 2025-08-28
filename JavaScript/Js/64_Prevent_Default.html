@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Default</title>
+</head>
+<body>
+  <!-- In JavaScript, the preventDefault() method is used to stop the browser’s default behavior for a specific event.
+It's commonly used in forms, links, and key events. -->
+
+<!-- jha bhe hme uske naturel behaviour change krna hoga dom ka wha pe use krenge prevent default -->
+
+<a href="https://www.google.com" id="anchor">Click me</a>
+
+<!-- type 2 -->
+
+<form action="" id="myForm">
+  <label for="f">name</label>
+  <input type="text" id="f">
+  <input type="submit">
+</form>
+
+<script>
+// kise bhi link ka kaam hota h ki jb hm click kre to uske href me jo h us pe le jye to hm hm chahte hi ki click se na jye balki duble click me jye
+
+// let link = document.getElementById("anchor");
+// link.addEventListener('click', function(e){
+//   console.log("link clicked..."); //ab ye kaam kr rhe h bt google pe re-direct nhi krega
+//   e.preventDefault();
+// })
+
+
+
+//form
+let form = document.getElementById("myForm");
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+})
+
+
+
+
+
+</script>
+</body>
+</html>

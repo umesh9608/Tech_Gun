@@ -1,0 +1,81 @@
+<!-- DOM: dom events are actions that occur as a fesult of the user action or 
+as result of stage change of the emments of a  DOM tree
+   Example of html events:
+
+ . When a user click the mouse
+ . When a web pages has loaded 
+ . When an image has been loaded. When the mouse moves over an element. When an input field is changed
+ . When an HTML foorm is submitted
+ . When a user strokes a key
+
+ most usefule event search list of dom events
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- learn event -->
+   <!-- type 1 to register events -->
+  <!-- <button id="btn" onclick="btnClick()">Click me</button> -->
+  <!-- onclick="" me hme ke function ka naame dena hota h ki kon sa function activate krana h to hm function ko js me btnClick name se bna rhe h -->
+
+
+
+
+  <!-- type 2  to register events eventListner -->
+   <!-- <button id="btn">Click me</button> -->
+
+   <!-- part 3 to register events   (short curt use anonomus fun ) -->
+    <!-- <button id="btn">click me</button> -->
+
+    <!-- part 4 question kya ek (element )event pe multipe eventlistner lagaya ja skta h -->
+    <button id="btn">click me</button>
+
+
+
+  <script>
+    //type 1
+    // function btnClick(){
+    //   alert("button was clicked");
+    // }
+
+
+    //type 2
+
+    // function btnClick(){
+    //   alert("button was clicked");
+    // }
+    // let btn = document.getElementById("btn");
+    // btn.addEventListener('click', btnClick) //it take  two para first kon sa event and second kon sa event activate krna hia //point 1.  first para me click hi likhna h not onclick   point 2. first para is event name so we use '' and second para is function name so we use normal parameter
+
+    //part 3  to use anonmous fun eska use pure code me ke hi baar use krna ho to krte h nhi to hm norma fun ka use krte h
+    // let btn = document.getElementById("btn");
+
+    // btn.addEventListener('click', function(){
+    //   alert("btn was clicked");
+    // })
+
+
+    // part 4 multiple eventListner in same event /button
+    // let btn = document.getElementById("btn");
+    // btn.addEventListener('mouseover', function(){
+    //   console.log("mouse over is activated");
+    // });
+
+    //   btn.addEventListener('mouseout', function(){
+    //   console.log("mouse out is activated");
+    // })
+
+
+
+  </script>
+</body>
+
+</html>

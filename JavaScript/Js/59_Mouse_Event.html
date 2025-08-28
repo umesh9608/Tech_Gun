@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mouse event</title>
+  <style>
+    #box {
+      height: 100px;
+      width: 100px;
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- mouse event  -->
+
+  <!-- onClick="" -->
+  <!-- <div id="box" onclick="fun()"></div> -->
+
+
+  <!-- onContextMenu=""  (clickr right mouse button)-->
+  <!-- <div id="box" oncontextmenu="fun()"></div> -->
+
+  <!-- ondblclick=()  click mouse left button two time-->
+  <!-- <div id="box" ondblclick="fun()"></div> -->
+
+<!-- mouse down  ju hm mouse button click krte h to ye active hota h bt ye onclick se different h jb mouse putton press krte h tb active hota h-->
+  <!-- <div id="box" onmousedown="fun()"></div> -->
+
+
+<!-- mouse up hb hm mouse button ko press kr ke chort h tb active hota h -->
+  <!-- <div id="box" onmouseup="fun()"></div> -->
+
+<!-- onmouseover curser jate h active hota h -->
+  <!-- <div id="box" onmouseover="fun()"></div> -->
+
+
+  <!-- onmouse out mouse cursur ko box ke ander le jate h to active nhi hot bj bahar le jate h to active hota h -->
+  <div id="box" onmouseout="fun()"></div>
+
+  <script>
+    function fun(){
+      alert("clicked event");
+    }
+  </script>
+</body>
+
+</html>

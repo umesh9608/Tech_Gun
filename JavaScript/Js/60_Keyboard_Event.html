@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- pta krna ki kon sa key press hua h -->
+  
+<div id="box"></div>
+
+
+
+
+<script>
+  // window.object use kr h qki pure wabpage me koi bhi key press kre to pta chl jye
+
+  window.addEventListener('keydown', chcekKey); //first event name and second fun name  //use keydown or keyup
+
+function chcekKey(event){ //it take i parameter for store event
+  console.log(event.key);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+
+<body>
+
+  <h2 class="intro">Heading 1</h2>
+  <div id="div1">
+
+    <p class="intro">Paragraph 1</p>
+    <h2 class="intro">Heading 2</h2>
+    <p>Paragraph 2</p>
+    <h2>Heading 3</h2>
+    <p class="intro">paragraph 3</p>
+  </div>
+
+  <script>
+
+
+
+    // quiry selector(css selector)  mujhe chahiye waisa p tag jisme class intro h
+
+    /*let elm = document.querySelector("p.intro") //waisa p tage jisme class intro lga ho
+    elm.innerHTML="hello";
+    console.log(elm); //but ye kewal ek hi p tag ko change kr rha h hme chahiye  2no p tag  esa eslye hua ki jb hm .querySelector use krte h to ye phla condition ko satisfied krta h or usi ko rkh leta h 
+    
+    // ager hme sara tag me chage krna h to uska naam h .queerySelectorAll
+    */
+
+
+    let elm = document.querySelectorAll("p.intro");
+    // elm.innerHTML = "hello"; //ye change nhi hoga qki ab array type ka bn gya esliye ab array type lena pdega like
+
+    for (let i = 0; i < elm.length; i++) {
+      elm[i].innerHTML = "hello";
+    }
+    console.log(elm);
+  </script>
+</body>
+
+</html>

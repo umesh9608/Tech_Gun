@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change html with js</title>
+</head>
+<body>
+  <div id="intro">
+    <p>hello this is a p tag    </p>
+  </div>
+  
+  <script>
+    //  to ab tk hmlog sikh kiye h ki kis tra se kise element ko select kiya ja skta hai  ab hmlog manipulate(jo elem ko select kiye h usko change) krna sikhenge
+   let elm =  document.getElementById("intro");
+   
+  //  type=1 fatch krna(dekhan)
+   let content = elm.innerHTML; //this is property not method
+  //  console.log(content);// <p>hello this is a p tag    </p> 
+  
+  //type -2 value ko set krna mean change krna
+  elm.innerHTML = "<h1>this is a heading</h1>";
+   </script>
+</body>
+</html>

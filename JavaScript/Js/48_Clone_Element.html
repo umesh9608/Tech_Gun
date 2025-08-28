@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clone Element</title>
+</head>
+
+<body>
+  <ul id="menu">
+    <li>home</li>
+    <li>product</li>
+    <li>about us</li>
+  </ul>
+
+  <script>
+    let menu = document.getElementById("menu");
+    let clonElm = menu.cloneNode(true); //this is boolean vlaue true (jb hm true likhte h to parent ke sath sath  child bhi copy hota h o jb hm false likhte h to parent hi copy hota h)
+
+    // console.log(clonElm);
+
+    // ab hme append krna h to  
+
+    // lone ka id ko change krna ho to 
+    clonElm.id="mobile-menu";
+
+    document.body.appendChild(clonElm);
+
+  </script>
+
+</body>
+
+</html>

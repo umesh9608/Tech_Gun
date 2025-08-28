@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn BOM</title>
+</head>
+<body>
+  <!-- BOM 
+    The BOM is used to interact with the browser
+     Windods Object : the windows object represents a window in brower.
+     
+     # All global js obj , fun  and variables with the var keyword automatically become members of the windows object.
+     
+     # Global variable are properties of the window object. 
+     Global function are methods of the window object.-->
+
+
+
+  <script>
+    var x= "hello";
+    // console.log(x); //ye x variable to h hi sath me ek windows obj ka properties bn chuka h like
+    console.log(window.x); //ye sirf var ki krta h let or const nhi
+
+    // function me bhi kaam krta h //metlab ye fun ek method bn gya h windows obj ka
+    function xyz(){
+      console.log("hi....");
+    }
+
+    // xyz();
+    window.xyz(); // question ager ye  windows.xyz method bn gya property bn gya  to ese bina window ke kise call kr pa rhe h (esliye kr pa rhe h qki windows default obj h browser ka eliye hm hm ignore krte h window ko to browser kud se smjh jata h ke ye windows ka property ya method manga ja rha h to hm windows ko likh skthe h or nhi bhi )
+
+    // windows method like propmt,alert
+
+    // alert("hi coder...") //windows ka method h
+    window.alert("hi coder...");
+  </script>
+</body>
+</html>

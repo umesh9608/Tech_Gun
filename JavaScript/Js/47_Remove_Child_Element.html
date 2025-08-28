@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to remove child element</title>
+</head>
+
+<body>
+  <ul id="menu">
+    <li>home</li>
+    <li>product</li>
+    <li>about us</li>
+  </ul>
+
+  <script>
+    // ab hm kuch (home)remode kr rhe h using js 
+    let parent = document.getElementById("menu");
+    // let elm = parent.firstElementChild;
+
+    // ager product remove krna h to 
+    let elm = parent.firstElementChild.nextElementSibling;
+    console.log(elm); //to what remove
+    parent.removeChild(elm);
+
+    // ab hme pure ko remove krna ho to
+    document.body.removeChild(parent);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+</head>
+
+<body>
+  <ul>
+    <li class="c1 p1">List 1</li>
+    <li>List 2</li>
+    <li class="c1">List 3</li>
+  </ul>
+  
+  <script>
+    // selset multiple html element and change it
+    /*
+    let elm = document.getElementsByClassName("c1");
+    // console.log(elm);
+    // console.log(elm.length);
+    for(let i = 0; i < elm.length; i++){
+      elm[i].innerHTML = "<p> hello</p>";
+    }
+      */
+
+      // select multiple class in same tag
+
+      let elm = document.getElementsByClassName("c1 p1"); //it work only where both class included
+
+      for(let  i = 0; i< elm.length; i++){
+        elm[i].innerHTML = "<p> hello</p>";  
+      }
+  </script>
+
+</body>
+
+</html>

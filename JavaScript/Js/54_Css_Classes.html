@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css class</title>
+  <style>
+    .color {
+      background-color: rgb(179, 204, 179);
+      color: red;
+    }
+
+    .dim {
+      border: 2px solid red;
+      padding: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ab dekhte h ki css ko class ke help se kis tra se change kr skte hai most useful this  -->
+  <div id="box" class="color dim">
+    <p>Lorem, ipsum dolor.</p>
+  </div>
+
+
+
+  <script>
+ 
+    let box = document.getElementById("box");
+
+  //  console.log(box.className); // type 1to find which class is already add in this tag
+  // box.className += " dim"; //add new class name dim
+
+  // to check type 2
+  // console.log(box.classList); //DOMTokenList(2) ['color', 'dim', value: 'color dim']
+
+  // for(let css of box.classList){ // hm value ke through bhi pta kr skte h ki kon kon s class lga h
+  //   console.log(css);
+  // }
+
+
+
+  //----------.add----------------
+  //add krne ke liye
+  // box.classList.add("sim"); //give new class name
+
+
+  //-------------.remove----------------------
+  // remove krne ke liye
+  // box.classList.remove("sim");
+
+  
+  //-----------------.replace---------------
+  //replace ke ko hta kr dusa add kr deta h
+  // box.classList.replace("color","tim"); //it take two value first kon sa hta na h dusra kya nwe lagana h
+
+
+
+  //--------------.contains-----------
+  //ke or tarika h check krne ki class lga hua h ya nhi(teturn true/flase)
+  // let result = box.classList.contains("color");
+  // console.log(result);
+  
+  
+  //----toggle  (ye koi chij lga h to hta deta h or nhi lga h to lga do just (opposite)---
+  box.classList.toggle("dim");
+  
+  </script>
+</body>
+
+</html>

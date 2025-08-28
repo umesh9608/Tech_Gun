@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- <button id="btn">Click me</button> -->
+
+  <!-- note -->
+   <button  id="btn" style="color: blue;">Click me</button>
+
+
+  <script>
+    let btn = document.getElementById("btn");
+
+    // type 1 to change inline css
+    // btn.style.cssText = "background-color:red; color:white";
+
+    // type 2 to change inline css using setAttribute( , );
+    // btn.setAttribute('style','color:white ; background-color:red'); //take two parameter
+
+    //type 3
+    // btn.style.color = "red";
+
+
+    //note:- inline css me ke problem h ki jo phle se css lga h use ye hta deta h like
+    // btn.style.background="red"; //ye kaam krta h bt .cssText nhi (override hone ke karn like)
+
+    // btn.style.cssText="background:red;"; //blue ko hta kr red kr diya
+
+    //ab chahte h ki jo phle se add h wo na hte or new add ho to use += 
+    // btn.style.cssText += "background:yellow; border: 5px solid green;";
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>insert before</title>
+</head>
+
+<body>
+  <!-- abhi tk hm append child se kaam kr rhe the to wo sabse last me ja kr add hota tha bt hm first ya khi bhi bich me krna ho to insert before ka use krenge -->
+  <!-- <ul id="list">
+    <li>list1</li>
+    <li>list2</li>
+    <li>list3</li>
+    <li>list4</li>
+  </ul> -->
+
+  <!-- type  ager me body me use krna ho ul me ni to  -->
+  <ul id="list">
+    <li>list1</li>
+    <li>list2</li>
+    <li>list3</li>
+    <li>list4</li>
+  </ul>
+
+  <script>
+    /* type 1
+    let list1 = document.getElementById("list"); //parent
+    let item = document.createElement("li");
+    item.textContent = "new list";
+
+    //ab hme position ka jarurat pdti h ki kha pe lagana h
+
+    // let pos = list1.firstElementChild;
+    // list1.insertBefore(item,pos) //1 para say what element and 2 para position
+
+    // ab hme list 2 select krna ho to use next sibling
+
+    // let pos = list1.firstElementChild.nextElementSibling;
+    // list1.insertBefore(item,pos);
+
+
+     // ab hme list 4 select krna ho to use next sibling
+
+    let pos = list1.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling;
+    list1.insertBefore(item,pos);
+
+    */
+
+
+    // type 2 kise body ke ander kise add krte h koi element
+let parent = document.body;
+
+let elm = document.createElement("h2");
+elm.textContent = "this is new element";
+
+let list = document.getElementById("list");
+
+parent.insertBefore(elm,list);
+
+  </script>
+</body>
+
+</html>
