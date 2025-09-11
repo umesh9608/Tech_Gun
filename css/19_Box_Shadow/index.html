@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Shadow</title>
+  <style>
+    div{
+      border: 2px solid red;
+      width: 500px;
+      background-color: yellowgreen;
+      margin: 100px;
+      padding: 20px;
+      /*x-axis,y-axis,blur,sprad radious,color value, inset is under the box value */
+      /* box-shadow: 10px 10px 15px 3px gray inset; */
+
+      box-shadow: 10px 10px 15px 3px gray inset, -10px 10px 15px 3px rgb(204, 115, 115) ;
+
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti vero nobis quia sint quae, ipsum officia expedita ad, doloremque atque odit impedit deserunt minus, amet voluptatibus. Delectus amet ex commodi!</p>
+  </div>
+
+  <span style="box-shadow: 5px 5px 10px red, -5px -5px 10px blue;
+">Lorem ipsum dolor sit amet.</span>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .hover-box {
+      width: 200px;
+      height: 100px;
+      background-color: #ff7f50;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+      margin: 50px auto;
+      text-align: center;
+      line-height: 100px;
+      transition: 0.3s;
+      border-radius: 8px;
+    }
+
+    .hover-box:hover {
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="hover-box">Hover Me!</div>
+</body>
+</html>
+ -->
