@@ -1,0 +1,39 @@
+<!-- if mix two color then called gradients -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Linear Gradient</title>
+  <style>
+    /* 
+      Linear Gradient
+      -------------------
+      → Creates a smooth transition between colors in a straight line.
+      → Syntax: linear-gradient(direction, color1, color2, ...)
+    */
+
+    body {
+      height: 100vh;
+      /* Full screen height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Creating a left-to-right gradient */
+      background: linear-gradient(to right, #ff7eb3, #65d6ce);
+    }
+
+    h1 {
+      color: white;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Linear Gradient Example</h1>
+</body>
+
+</html>
