@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Image Sprites (Fixed Example)</title>
+  <style>
+    /*
+      CSS Image Sprites Fixed
+      -------------------------
+       Use the same sprite sheet for all icons
+       Each icon has the SAME height and width
+       Use background-position to show different icons
+    */
+
+    .sprite {
+      width: 120px;
+      /* Icon width */
+      height: 100px;
+      /* Icon height */
+      background-image: url('https://media.geeksforgeeks.org/wp-content/uploads/icon.png');
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin: 10px;
+      border: 2px solid #f22d2d;
+      border-radius: 8px;
+    }
+
+    /* Different positions for each icon */
+    /* First Icon */
+    #sprit {
+      background-position: 0 0;
+    }
+
+    /* Second Icon */
+    #sprit2{
+      background-position: -130px 0;
+    }
+
+    /* Third Icon */
+    #sprit3{
+    background-position: -290px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Image Sprites - Working Example</h1>
+
+  <div id="sprit" class="sprite"></div>
+  <div id="sprit2" class="sprite"></div>
+  <div id="sprit3" class="sprite"></div>
+
+</body>
+
+</html>
