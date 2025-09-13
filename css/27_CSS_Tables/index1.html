@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Table Properties</title>
+  <style>
+    /* 1️⃣ Basic Table Styling */
+    table {
+      width: 600px;
+      border: 2px solid black; /* Table border */
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid black; /* Cell border */
+      padding: 10px; /* Space inside cells */
+      text-align: center; /* Center text */
+    }
+
+    /* 2️⃣ Border Collapse */
+    .collapse-table {
+      border-collapse: collapse; /* Merges borders */
+    }
+
+    /* 3️⃣ Border Spacing */
+    .spacing-table {
+      border-collapse: separate;
+      border-spacing: 15px; /* Space between cells */
+    }
+
+    /* 4️⃣ Table Width & Height */
+    .size-table {
+      width: 80%; /* Set table width */
+      height: 200px; /* Set table height */
+    }
+
+    /* 5️⃣ Table Text Alignment */
+    .align-table td {
+      text-align: left;  /* Left align text */
+    }
+
+    /* 6️⃣ Table Background Colors */
+    .bg-table th {
+      background-color: #3498db; /* Header color */
+      color: white;
+    }
+    .bg-table td {
+      background-color: #ecf0f1; /* Cell color */
+    }
+
+    /* 7️⃣ Table Hover Effect */
+    .hover-table tr:hover {
+      background-color: #f39c12; /* Highlight on hover */
+      color: white;
+    }
+
+    /* 8️⃣ Table Striping */
+    .striped-table tr:nth-child(even) {
+      background-color: #f2f2f2; /* Even rows */
+    }
+    .striped-table tr:nth-child(odd) {
+      background-color: #ffffff; /* Odd rows */
+    }
+
+    /* 9️⃣ Caption Styling */
+    caption {
+      caption-side: top; /* Position caption */
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">CSS Table Properties</h1>
+
+  <!-- 1️⃣ Basic Table -->
+  <table>
+    <caption>Basic Table</caption>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Amit</td>
+      <td>22</td>
+      <td>Delhi</td>
+    </tr>
+    <tr>
+      <td>Priya</td>
+      <td>24</td>
+      <td>Mumbai</td>
+    </tr>
+  </table>
+
+  <!-- 2️⃣ Border Collapse -->
+  <table class="collapse-table">
+    <caption>Border Collapse Table</caption>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Pen</td>
+      <td>₹10</td>
+    </tr>
+    <tr>
+      <td>Book</td>
+      <td>₹50</td>
+    </tr>
+  </table>
+
+  <!-- 3️⃣ Border Spacing -->
+  <table class="spacing-table">
+    <caption>Border Spacing Table</caption>
+    <tr>
+      <th>Fruit</th>
+      <th>Color</th>
+    </tr>
+    <tr>
+      <td>Apple</td>
+      <td>Red</td>
+    </tr>
+    <tr>
+      <td>Mango</td>
+      <td>Yellow</td>
+    </tr>
+  </table>
+
+  <!-- 4️⃣ Table Width & Height -->
+  <table class="size-table">
+    <caption>Table with Width & Height</caption>
+    <tr>
+      <th>Subject</th>
+      <th>Marks</th>
+    </tr>
+    <tr>
+      <td>Math</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td>Science</td>
+      <td>88</td>
+    </tr>
+  </table>
+
+  <!-- 5️⃣ Table Text Alignment -->
+  <table class="align-table">
+    <caption>Table Text Alignment</caption>
+    <tr>
+      <th>Country</th>
+      <th>Capital</th>
+    </tr>
+    <tr>
+      <td>India</td>
+      <td>New Delhi</td>
+    </tr>
+    <tr>
+      <td>USA</td>
+      <td>Washington</td>
+    </tr>
+  </table>
+
+  <!-- 6️⃣ Table Background Colors -->
+  <table class="bg-table">
+    <caption>Table Background Colors</caption>
+    <tr>
+      <th>Language</th>
+      <th>Usage</th>
+    </tr>
+    <tr>
+      <td>HTML</td>
+      <td>Structure</td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>Styling</td>
+    </tr>
+  </table>
+
+  <!-- 7️⃣ Table Hover Effect -->
+  <table class="hover-table">
+    <caption>Table Hover Effect</caption>
+    <tr>
+      <th>Day</th>
+      <th>Temperature</th>
+    </tr>
+    <tr>
+      <td>Monday</td>
+      <td>32°C</td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td>30°C</td>
+    </tr>
+  </table>
+
+  <!-- 8️⃣ Table Striping -->
+  <table class="striped-table">
+    <caption>Striped Table</caption>
+    <tr>
+      <th>Roll No</th>
+      <th>Name</th>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>Rahul</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>Sneha</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td>Ravi</td>
+    </tr>
+  </table>
+
+  <!-- 9️⃣ Caption Styling -->
+  <table>
+    <caption>Caption Styled Table</caption>
+    <tr>
+      <th>Movie</th>
+      <th>Year</th>
+    </tr>
+    <tr>
+      <td>Inception</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <td>Interstellar</td>
+      <td>2014</td>
+    </tr>
+  </table>
+</body>
+</html>
