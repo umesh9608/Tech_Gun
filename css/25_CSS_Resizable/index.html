@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css resizable</title>
+  <style>
+    /*  */
+    textarea {
+      resize: none;
+    }
+
+    #overflow {
+      background-color: whitesmoke;
+      border: 5px solid red;
+      width: 500px;
+      height: 300px;
+      overflow: auto;
+      resize: horizontal;
+      /*both,none,virticle...*/
+
+    }
+
+    /*
+  Summary Notes:
+
+  1. The CSS 'resize' property allows users to resize elements manually.
+  2. To make 'resize' work, you must set the 'overflow' property to
+     'auto', 'hidden', or 'scroll'.
+  3. Commonly used on:
+     - Textareas
+     - Chat boxes
+     - Resizable panels
+     - Div containers
+
+
+     (app use element ko resize kr skte ho jo block element ho or usme overflow ya to scroll hona chahiye ya auto ya hidden hona chahiye visible nhi hona chahiye)
+*/
+  </style>
+</head>
+
+<body>
+  <textarea name="" id=""></textarea>
+
+  <div id="overflow">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita animi amet eius nostrum suscipit, maxime eos
+      doloribus recusandae id voluptatum esse tenetur illum totam beatae fugiat quisquam quasi nisi cupiditate in
+      repellat minima? Ducimus maxime neque consequuntur hic aut inventore, distinctio eos impedit explicabo minus
+      beatae provident nesciunt fuga illum velit praesentium numquam sint, doloribus nesciunt dignissimos distinctio
+      adipisci sint
+      labore maiores tenetur. Molestiae tenetur fuga enim inventore, eius, est quidem nam asperiores ipsum sequi quod
+      voluptate ullam facere temporibus consequuntur cumque. Aperiam inventore veniam porro tempora, delectus sit alias
+      modi! Unde nihil quos suscipit aut, consequuntur voluptatem velit hic exercitationem eius, iste blanditiis cumque
+      architecto ea voluptate laborum, maiores nisi delectus repellendus sit sunt! Minus quia ducimus excepturi
+      adipisci! Cum saepe dolor ullam doloremque? Expedita atque dolor delectus a. Nobis eveniet voluptatibus hic.
+      Soluta eius reiciendis iste excepturi suscipit quo delectus doloremque quam sint blanditiis adipisci, libero ipsam
+      quidem maiores impedit officia mollitia aperiam cupiditate minima explicabo earum. Ipsum repudiandae quidem aut
+      odit cquidem, dicta laudantium mollitia rerum. Ad
+      voluptatibus velit expedita ducimus explicabo, asperiores assumenda voluptas nostrum repellendus commodi aliquam
+      vitae accusamus nobis eos inventore laudantium vel eveniet sunt officia aperiam! Possimus, modi. Distinctio
+      aliquid, aliquam dolorem amet alias magni omnis repellat excepturi, non molestias ullam quaerat? Aliquam
+      consectetur soluta, ipsa debitis ipsum
+      magni quis ducimus, fuga maxime, earum modi? Pariatur impedit minus tempore inventore, ratione unde expedita
+      aliquam ab deserunt doloribus excepturi perferendis nesciunt mollitia, qpellendus adipisci vitae animi molestias
+      error.</p>
+  </div>
+</body>
+
+</html>
