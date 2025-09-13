@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>style list</title>
+  <style>
+    ul {
+      /* list-style-type: disc; disc is default,none,circle,square */
+      /* add image in list style type */
+      list-style-image: url(../img/right-arrow\ \(1\).png);
+    }
+
+    ol {
+      list-style-type: circle;
+      /* lower-alpha,upper-alpha,lower-roman,upper-roman,decimal,decimal-leading-zero,*/
+    }
+
+    li {
+      border: 4px solid black;
+      /* ye property list incon ko control krta hia */
+      list-style-position: inside;
+      /*default is outside */
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://www.photopea.com/"></a>
+  <a href="https://www.flaticon.com/free-icons/next" title="next icons">Next icons created by Roundicons - Flaticon</a>
+  <h2>unorderlist</h2>
+  <ul>
+    <li>ltem1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+  <hr>
+  <ol>
+    <li>ltem1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ol>
+</body>
+
+</html>
+
+<!-- /*
+   CSS List Notes
+
+  1. CSS provides properties to style HTML lists (ordered <ol>, unordered <ul>, and list items <li>).
+
+  2. Important CSS List Properties:
+     -----------------------------------
+     a) list-style-type:
+        - Defines the type of bullet or numbering.
+        - Values: disc, circle, square, decimal, lower-alpha, upper-roman, none, etc.
+        Example: list-style-type: square;
+
+     b) list-style-image:
+        - Replaces the default bullet/number with a custom image.
+        Example: list-style-image: url('icon.png');
+
+     c) list-style-position:
+        - Defines the position of the bullet/number relative to the text.
+        - Values: inside | outside (default).
+        Example: list-style-position: inside;
+
+     d) list-style (shorthand):
+        - A shorthand property to set:
+          list-style-type + list-style-position + list-style-image
+        Example: list-style: square inside;
+
+  3. Default Behavior:
+     - Unordered list (<ul>) → disc bullets.
+     - Ordered list (<ol>) → decimal numbering.
+
+  4. Usage Examples:
+     - Navigation menus
+     - Custom bullet designs
+     - Ordered steps or instructions
+     - To-do lists
+
+  5. Tip:
+     - To remove bullets or numbers → list-style-type: none;
+*/
+ -->
