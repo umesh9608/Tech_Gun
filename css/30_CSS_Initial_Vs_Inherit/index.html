@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>initial vs inherit</title>
+  <style>
+    #green {
+      color: green;
+    }
+
+    #blue {
+      color: red;
+    }
+
+    #initial{
+      /* initial mean bydefault (but in link bydefault color is blue) */
+      color: initial;
+    }
+
+    #inherit {
+      /* inherit me take parent property(color) */
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="green">
+    green text <br>
+    <a href="" id="blue">link 1</a> <br>
+    <a href="" id="initial">Link 2</a><br>
+    <a href="" id="inherit">Link 3</a>
+  </div>
+</body>
+
+</html>
