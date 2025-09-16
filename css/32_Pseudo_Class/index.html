@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>sudo classes</title>
+  <style>
+    li:first-child{ /*first,last, use only*/
+      color: red;
+    }
+
+    /* if we need some one then use */
+    li:nth-child(4){ /*pass number,odd,even,pattern like (3n + 1),  */
+      color: red;
+    }
+
+    li:nth-last-child(2){
+      color: blue;
+    }
+
+    input:focus{
+      border: 5px solid red;
+    }
+  </style>
+</head>
+<body>
+  <!-- ek element ka ek spacel state ko hm sudo class khte hai like mouse hover -->
+   <h1>heading 1</h1>
+<p>this is p tag</p>
+<p>this is p tag</p>
+<p>this is p tag</p>
+<p>this is p tag</p>
+<p>this is p tag</p>
+<ul>
+  <li>listem item</li>
+  <li>list item</li>
+  <li>list item</li>
+  <li>list item</li>
+  <li>list item</li>
+</ul>
+
+<input type="text">
+</body>
+</html>
