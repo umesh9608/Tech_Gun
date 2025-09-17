@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display </title>
+  <!--  -->
+  <style>
+    .display {
+      border: 1px solid red;
+      width: 50%;
+      height: 100px;
+      /* when we use display:inline the it behave inline block  now not work height and width */
+
+      /* 
+ INLINE ELEMENTS:
+- Take ONLY required width (content size)
+- Do NOT start on a new line (sit side by side)
+- We CANNOT set WIDTH and HEIGHT
+- MARGIN works only LEFT & RIGHT (not TOP & BOTTOM)
+*/
+      /* display: inline; */
+
+      /* 
+ BLOCK ELEMENTS:
+- Take FULL width (100% by default)
+- Always start on a NEW line
+- We can set WIDTH, HEIGHT, MARGIN, and PADDING.
+*/
+      /* display: block; */
+
+      /* 
+ INLINE-BLOCK ELEMENTS:
+- Behave LIKE inline (sit side by side)
+- BUT we CAN set WIDTH, HEIGHT, MARGIN, and PADDING
+- Best of BOTH worlds → inline + block
+*/
+      /* display: inline-block; */
+    }
+
+    #div1 {
+      /* if we not want to show the use display:none(hide)  ye space nhi stor krta h*/
+      /* display: none; */
+
+      /* ye dikhta nhi h bt space capture kr ke rkh leta hia */
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="display" id="div1">
+    this is a div 1
+  </div>
+
+  <div class="display">
+    this is a div 2
+  </div>
+</body>
+
+</html>
+
+<!-- 
+| Property         | Starts on New Line | Takes Full Width | Can Set Width/Height | Example Tag |
+| ---------------- | ------------------ | ---------------- | -------------------- | ----------- |
+| **block**        | ✅ Yes              | ✅ Yes            | ✅ Yes                | `<div>`     |
+| **inline**       | ❌ No               | ❌ No             | ❌ No                 | `<span>`    |
+| **inline-block** | ❌ No               | ❌ No             | ✅ Yes                | `<button>`  |
+-->
