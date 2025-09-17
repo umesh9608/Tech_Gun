@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+  background: #ddd;
+  height: 200px;
+}
+.box {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background: lightgreen;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">I am absolute</div>
+  </div>
+</body>
+</html>
+<!-- Notes:
+
+Removed from normal document flow.
+
+Positioned relative to the nearest positioned ancestor.
+
+If no positioned ancestor → relative to <body>.
+
+Useful for tooltips, popups, floating elements. -->
