@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-D Transform</title>
+  <style>
+/* transform:prespactive(200px) rotate3d()
+prespactive-origin:50% 50%; */
+#cover{
+ border: 3px solid red;
+ height: 200px;
+ width: 200px;
+ margin: 150px;
+}
+#content{
+height: 200px;
+width: 200px;
+background-color: yellowgreen;
+/* 3d */
+/* transform: perspective(300px) rotate3d(0,50,50,20deg); */
+/* transform: perspective(300px) translate3d(50px, 20px, 40px); */
+}
+  </style>
+</head>
+<body>
+  <!-- 3D- x,y,z  
+   prespective: kisi bhi obj ko app kitne distance se dekh rhe ho 
+   prespective origin:- ka matlab kis angle se dekh rhe ho 
+   
+   .. go to :https://3dtransforms.desandro.com/perspective-->
+   <div id="cover">
+    <div id="content"></div>
+   </div>
+</body>
+</html>
