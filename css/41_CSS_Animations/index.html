@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css animations</title>
+  <style>
+    @keyframes changecolor {
+
+      /* from means start (0 sec)
+      from {
+        background-color: red;
+      }
+
+      /* to means end time */
+      /* to {
+        background-color: yellow;
+      }  */
+
+
+      0% {
+        background-color: red;
+      }
+
+      25% {
+        width: 300px;
+      }
+
+      50% {
+        background-color: orange;
+      }
+
+      75% {
+        width: 200px;
+      }
+
+      100% {
+        background-color: yellow;
+      }
+    }
+
+    #animate {
+      background-color: red;
+      height: 200px;
+      width: 200px;
+      animation-name: changecolor;
+      animation-duration: 4s;
+      /* animation-delay: 2s; */
+      animation-iteration-count: infinite;
+      /*give value*/
+    }
+
+    #animate2 {
+      background-color: red;
+      height: 200px;
+      width: 200px;
+      animation-name: changecolor;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      /*give value*/
+      /* animation-direction: reverse; /*alternet /alternet-revers* */
+      animation-timing-function: ease;
+      /*ease-in/ ease-in-out/ease-in-ese-out/linear*/
+
+    }
+
+    @keyframes chnges{
+      0%{background-color: red; border-radius: 10%;}
+      20%{background-color: rgba(101, 182, 51, 0.724); border-radius: 20%;}
+      30%{background-color: rgb(140, 27, 138); border-radius: 30%;}
+      40%{background-color: rgb(41, 9, 9); border-radius: 40%;}
+      50%{background-color: rgb(15, 185, 80); border-radius: 50%;}
+      60%{background-color: rgb(61, 26, 167); border-radius: 40%;}
+      70%{background-color: rgb(200, 54, 98); border-radius: 30%;}
+      80%{background-color: rgba(106, 189, 5, 0.527); border-radius: 20%;}
+      90%{background-color: rgba(11, 148, 20, 0.632); border-radius: 10%;}
+      100%{background-color: rgba(20, 208, 192, 0.418); border-radius: 0%;}
+    }
+    #animate3 {
+      background-color: red;
+      height: 300px;
+      width: 300px;
+      animation-name: chnges;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+     animation-timing-function: linear;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- css animation is add on css 3  -->
+  <div id="animate"></div>
+  <hr>
+  <div id="animate2"></div>
+<hr>
+  <div id="animate3"></div>
+
+</body>
+
+</html>
