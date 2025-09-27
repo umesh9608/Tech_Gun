@@ -1,0 +1,17 @@
+The <meta> tag is not part of CSS; it is an HTML element used to provide metadata about an HTML document.
+ Metadata is data that describes other data, and in this context, it helps browsers, search engines, and other web services understand how to handle or display the content.
+ The <meta> tag does not appear directly on the webpage but provides crucial information such as the character set, page description, keywords, author details, and viewport settings.
+
+The <meta> tag is always placed within the <head> section of an HTML document.
+ It is a void element, meaning it must have a start tag and must not have an end tag.
+ It cannot be included within a CSS file or inside a <style> block, as HTML tags like <meta> cannot be written inside CSS.
+ CSS files can only contain CSS rules and cannot include arbitrary HTML elements.
+
+Common uses of the <meta> tag include:
+
+Character Encoding: Declaring the document's character encoding, with UTF-8 being the only valid encoding for HTML5 documents.
+Viewport Settings: Ensuring the page is responsive on all devices by adjusting the width and zoom level.
+Description: Providing a short, relevant description of the webpage, which search engines often use in search results.
+Theme Color: Defining a suggested color for the browser interface (like the title bar or tab bar), which is especially useful for progressive web apps.
+While the <meta> tag was once used for SEO purposes with keywords, modern search engines like Google no longer consider the keywords meta tag to be useful due to past abuse.
+ The description meta tag, however, remains valuable for SEO and user experience.
